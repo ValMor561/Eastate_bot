@@ -1,0 +1,17 @@
+[Unit]
+Description = Eastate Bot
+After = network.target
+
+[Service]
+Type = simple
+WorkingDirectory = /var/www/Eastate_bot/
+ExecStart = /usr/bin/python3.8 main.py
+User = root
+Restart = on-failure
+SyslogIdentifier = /var/log/Eastate_bot.log
+RestartSec = 5
+TimeoutStartSec = infinity
+MemoryLimit=200M
+
+[Install]
+WantedBy = multi-user.target
