@@ -5,13 +5,13 @@ After = network.target
 [Service]
 Type = simple
 WorkingDirectory = /var/www/Eastate_bot/
-ExecStart = /usr/bin/python3.8 main.py
+ExecStart = /usr/bin/python main.py
 User = root
 Restart = on-failure
 SyslogIdentifier = /var/log/Eastate_bot.log
 RestartSec = 5
 TimeoutStartSec = infinity
-MemoryLimit=200M
+MemoryMax=200M
 
 [Install]
 WantedBy = multi-user.target
